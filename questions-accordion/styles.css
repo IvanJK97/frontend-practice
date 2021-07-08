@@ -45,7 +45,9 @@ i {
 }
 
 i:hover {
-  /* https://stackoverflow.com/questions/16516793/how-to-reverse-an-animation-on-mouse-out-after-hover */
+  /* https://stackoverflow.com/questions/16516793/how-to-reverse-an-animation-on-mouse-out-after-hover 
+    - Should use transform here instead of animation
+  */
   transform: rotate(90deg);
   transition-duration: 0.8s;
 }
@@ -64,6 +66,7 @@ h3 {
 }
 
 .hidden {
+  /* Need important to override icons display: flex */
   display: none !important;
 }
 
