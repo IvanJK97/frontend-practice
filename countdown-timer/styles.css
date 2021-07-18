@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;700&display=swap");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 3rem auto;
+  font-family: "Roboto", sans-serif;
+
+  display: grid;
+}
+
+.container img {
+  width: 100%;
+}
+
+.container h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: steelblue;
+  margin: 2rem 0 0.5rem;
+}
+
+.container h3 {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin: 0.5rem 0 0;
+}
+
+.container p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+  margin: 2rem 0 1rem;
+  color: slategray;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timer-box {
+  width: 80px;
+  height: 80px;
+  margin: 1rem 1rem 0 0;
+
+  background-color: #102a42;
+  position: relative;
+}
+
+.timer-box div {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.timer p {
+  position: absolute;
+  margin: 0;
+  color: white;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 1132px;
+    /* https://stackoverflow.com/questions/45459151/how-to-set-the-maximum-width-of-a-column-in-css-grid-layout */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .container img {
+    grid-column: 1 / span 1;
+    width: 550px;
+    height: 100%;
+  }
+
+  .text {
+    grid-column: 2 / -1;
+  }
+
+  .container h1 {
+    margin-top: 0;
+  }
+}
